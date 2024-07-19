@@ -10,12 +10,11 @@ First of all, the task is to filter, from ten thousands of kanjis, a list with r
 
 For our project, we decided to analyse the Japanese Wikipedia, a large database of texts about various topics. Thus, we assume the necessity of using a great number of kanjis. We tested our calculations on the 5 millions sentences of the [Japanese wiki dump sentence dataset](https://huggingface.co/datasets/AhmedSSabir/Japanese-wiki-dump-sentence-dataset) by Ahmed Sabir. For the project, we then used a complete dump of the Japanese Wikipedia, as of 2022.08.08. The dataset (.json), prepared by Inari Kami is available [here](https://huggingface.co/datasets/inarikami/wikipedia-japanese).
 
-Bacis stats:
-- Total number of articles: 1317738
-- Character counts:
-  - kanji: 858165384
-  - other: 1104910120
-  - hiragana: 505859344
-  - katakana: 550415364
+Here are some basic stats about the Japanese Wikipedia dataset: 
+- The total number of article is 1 317 738;
+- The number of occurences of:
+  - kanjis is: 858 165 384 (44.68%);
+  - katakana is: 550 415 364 (26.35%);
+  - hiragana is: 505 859 344 (28.97%);
 
 ## A new list: ordering the kanjis
