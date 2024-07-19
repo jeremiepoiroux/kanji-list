@@ -9,7 +9,7 @@ With this project, I would like to suggest a new list, meeting contemporary quan
 First of all, the task is to filter, from ten thousands of kanjis, a list with relevant (useful) kanjis. The most popular lists (from MEXT, RTK, JLPT, etc.) seem to have been filtered by popularity, although the criterias are unknown. They generally feature 2000+ kanjis, a reliable number to read the majority of common texts (especially newspaper articles). Projects which try to objectify the filtering exist, like [Kanji Usage Frequency](https://scriptin.github.io/kanji-frequency/). Dmitry Shpika had a similar goal to us, which was providing answers to the following question: 
 > "in which order should I learn Japanese kanji if I have a goal of reading some specific type of texts, e.g. news or fiction?".
 
-For our project, we decided to analyse the Japanese Wikipedia, a large database of texts about various topics. Thus, we assume the necessity of using a great number of kanjis. We tested our calculations on the 5 millions sentences of the [Japanese wiki dump sentence dataset](https://huggingface.co/datasets/AhmedSSabir/Japanese-wiki-dump-sentence-dataset) by Ahmed Sabir. For the project, we then used a complete dump of the Japanese Wikipedia, as of 2022.08.08. The dataset (.json), prepared by Inari Kami is available [here](https://huggingface.co/datasets/inarikami/wikipedia-japanese).
+For our project, we decided to analyse the Japanese Wikipedia, a large database of texts about various topics. Thus, we assume the necessity of using a great number of kanjis. We tested our calculations on the 5 millions sentences of the [Japanese wiki dump sentence dataset](https://huggingface.co/datasets/AhmedSSabir/Japanese-wiki-dump-sentence-dataset) by Ahmed Sabir. For the project, we then used a complete dump of the Japanese Wikipedia, as of 2022.08.08. The dataset (.json), prepared by Inari Kami is available [here](https://huggingface.co/datasets/inarikami/wikipedia-japanese). For convenience, I transformed the .json into a .csv file (I will give access to it). 
 
 Here are some basic stats about the Japanese Wikipedia dataset: 
 - The total number of articles is 1 317 738;
@@ -18,8 +18,12 @@ Here are some basic stats about the Japanese Wikipedia dataset:
   - katakana is 550 415 364 (26.35%);
   - hiragana is 505 859 344 (28.97%);
 - The unique number of kanjis hits the limit of the CJK Unified Ideograph (20 992). 
-Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1054), the number of unique "kanjis" (actually, ideographs) would be X.
+Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1 054), the number of unique "kanjis" (actually, ideographs) would be X.
+
+The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found that the kanjis count was fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). 
 
 
 
 ## A new list: ordering the kanjis
+
+Work In Progress
