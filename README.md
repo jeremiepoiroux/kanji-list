@@ -14,9 +14,12 @@ For our project, we decided to analyse the Japanese Wikipedia, a large database 
 Here are some basic stats about the Japanese Wikipedia dataset: 
 - The total number of articles is 1 317 738;
 - The number of occurences of:
-  - kanjis (ie. all the unicode characters from `\u4E00 to \u9FFF`) is 858 165 384 (44.68%);
+  - kanjis, ie. all the 20 992 CJK Unified Ideographs (unicode `\u4E00` to `\u9FFF`), is 858 165 384 (44.68%);
   - katakana is 550 415 364 (26.35%);
   - hiragana is 505 859 344 (28.97%);
-- The number of unique kanjis is 20912/19921 (TBC).
+- The unique number of kanjis hits the limit of the CJK Unified Ideograph (20 992). 
+Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1054), the number of unique "kanjis" (actually, ideographs) would be X.
+
+
 
 ## A new list: ordering the kanjis
