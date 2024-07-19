@@ -16,5 +16,6 @@ Here are some basic stats about the Japanese Wikipedia dataset:
   - kanjis is 858 165 384 (44.68%);
   - katakana is 550 415 364 (26.35%);
   - hiragana is 505 859 344 (28.97%);
+- The number of unique kanjis is 20912 (TBC).
 
 ## A new list: ordering the kanjis
