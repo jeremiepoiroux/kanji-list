@@ -18,11 +18,18 @@ Here are some basic stats about the Japanese Wikipedia dataset:
   - katakana is 550 415 364 (26.35%);
   - hiragana is 505 859 344 (28.97%);
 - The unique number of kanjis hits the limit of the CJK Unified Ideograph (20 992). 
-Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1 054), the number of unique "kanjis" (actually, ideographs) would be X.
+Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1 054), the number of unique "kanjis" (actually, ideographs) would be 31 827.
 
-The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found that the kanjis count was fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). 
+The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found that the kanjis count was fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). As a result, the number of unique Kanjis used in the Japanese Wikipedia excepted in the mentioned articles is 20 001. We now have a .csv file with five columns, the kanjis, the rank the rank (based on the number of occurences), the number of occurrences, the frequency of use and the cumulative frequency. The file is ordered by rank.
 
-
+An interesting insight, to cover 10% of the total use of kanjis, one only need to know 7 of them. In other words, 7 kanjis are enough to read 10% of the kanjis used in a text:
+1. 年, 1, 27383261, 0.0319094253598775, 0.0319094253598775
+2. 日, 2, 16694015, 0.0194533596856552, 0.0513627850455327
+3. 月, 3, 13533379, 0.0157703038753285, 0.0671330889208613
+4. 大, 4, 9205888, 0.0107275242348744, 0.0778606131557357
+5. 学, 5, 7801260, 0.0090907260345288, 0.0869513391902646
+6. 本, 6, 7239535, 0.0084361538139201, 0.0953874930041847
+7. 人, 7, 5861052, 0.0068298221064452, 0.10221731511063
 
 ## A new list: ordering the kanjis
 
