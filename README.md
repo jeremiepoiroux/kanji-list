@@ -22,7 +22,7 @@ Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the charact
 
 The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found that the kanjis count was fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). As a result, the number of unique Kanjis used in the Japanese Wikipedia excepted in the mentioned articles is 20 001. We now have a .csv file with five columns, the kanjis, the rank the rank (based on the number of occurences), the number of occurrences, the frequency of use and the cumulative frequency. The file is ordered by rank.
 
-An interesting insight, to cover 10% of the total use of kanjis, one only need to know 7 of them. In other words, 7 kanjis are enough to read 10% of the kanjis used in a text:
+An interesting insight, to cover 10% of the total use of kanjis, one only need to know 7 of them. In other words, to know 7 kanjis should be enough to read 10% of the kanjis used in a text:
 | Kanji | Rank | Nb. of occ.| Frequency | Cum. Freq. |
 |-------|------|------------|------------|-----------|
 | 年    | 1    | 27 383 261 | 0.031909   | 0.031909  |
