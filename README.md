@@ -42,11 +42,18 @@ If we have a look at the .csv, we can see that:
 - to cover 33% of the total use of kanjis, one only need to know 72 of them;
 - to cover 50% of the total use of kanjis, one only need to know 165 of them;
 - to cover 90% of the total use of kanjis, one only need to know 910 of them;
-- Finally, to cover 99% of the total use of kanjis, one only need to know 2172 of them.
+- Finally, to cover 99% of the total use of kanjis, one only need to know 2 172 of them.
 
 We will use this threshold to filter our list accordingly. The filtered list may be downloaded [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count_99.csv).
 
-As a second step, we may now add some information to the .csv and have some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 8). ADD OTHER FREQUENCY MEASURES. 
+As a second step, we may now proof-test the list with regard to Patrick Kandrac's [work](https://www.japanesestudies.org.uk/ejcjs/vol22/iss2/kandrac.html) which resulted in a [comparison](https://www.reddit.com/r/LearnJapanese/comments/rji33t/ultimate_kanji_frequency_list/) of the frequency rank of kanjis in seven databases, augmented by one average frequency and two weighted frequencies columns. I compared the rank of the frequency of kanjis in the Japanese 2022 Wikipedia with all the 10 dabasets, first with the mean of the differences of frequency of all kanjis, then with the mean of the ratio of frequency of all kanjis. Please note that form the merge of the two lists (mine with 2 172 kanjis, Patricks with 2 242), the comparison is effective on 1 977 kanjis.
+
+| Google | KUF   | MCD    | 文化庁  | jisho.org | KD   | WKFR | AVG FREQ | FREQ (1) | FREQ BIG 5 |
+|--------|-------|--------|--------|-----------|------|------|----------|----------|------------|
+| -15.26 | -49.18| -148.75| -21.72 | -11.21    | -2.44| -6.51| -36.44   | -34.17   | -53.07     |
+| 1.24   | 0.96  | 0.88   | 1.14   | 1.17      | 1.17 | 1.17 | 0.97     | 0.98     | 0.97       |
+
+Third, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). 
 
 ## A new list: ordering the kanjis
 
