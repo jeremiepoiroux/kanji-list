@@ -34,7 +34,6 @@ As a prelimenary interesting insight, to cover 10% of the total use of kanjis, o
 | 人    | 7    | 5 861 052  | 0.006830   | 0.102217  |
 
 This trend can also be verified on the following (basic) graph:
-![Kanji Occurrences Trend](https://github.com/jeremiepoiroux/kanji-list/blob/main/kanji_trend.png)
 <img src="https://github.com/jeremiepoiroux/kanji-list/blob/main/kanji_trend.png" alt="Kanji Occurrences Trend" width="500">
 
 If we have a look at the .csv, we can see that:
@@ -42,8 +41,9 @@ If we have a look at the .csv, we can see that:
 - to cover 33% of the total use of kanjis, one only need to know 72 of them;
 - to cover 50% of the total use of kanjis, one only need to know 165 of them;
 - to cover 90% of the total use of kanjis, one only need to know 910 of them;
-- Finally, to cover 99% of the total use of kanjis, one only need to know 2173 of them.
-We will use this mark as a threshold and filter our list accordingly. The filtered list may be downloaded HERE.
+- Finally, to cover 99% of the total use of kanjis, one only need to know 2172 of them.
+
+We will use this mark as a threshold and filter our list accordingly. The filtered list may be downloaded [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count_99.csv).
 
 ## A new list: ordering the kanjis
 
