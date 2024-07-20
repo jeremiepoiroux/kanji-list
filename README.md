@@ -39,6 +39,9 @@ This trend can also be verified on the following graph (TREND GRAPH). If we have
 - to cover \frac{1}{2} of the total use of kanjis, one only need to know 165 of them;
 - to cover \frac{9}{10} of the total use of kanjis, one only need to know 910 of them;
 - Finally, to cover \frac{99}{100} of the total use of kanjis, one only need to know 2173 of them.
+- 
+\(\frac{1337}{20001}\)
+\frac{1337}{20001}\
 
 We will use this mark as a threshold and filter our list accordingly. The filtered list may be downloaded HERE.
 
