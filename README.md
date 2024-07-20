@@ -35,6 +35,7 @@ As a prelimenary interesting insight, to cover 10% of the total use of kanjis, o
 
 This trend can also be verified on the following (basic) graph:
 ![Kanji Occurrences Trend](https://github.com/jeremiepoiroux/kanji-list/blob/main/kanji_trend.png)
+<img src="https://github.com/jeremiepoiroux/kanji-list/blob/main/kanji_trend.png" alt="Kanji Occurrences Trend" width="50">
 
 If we have a look at the .csv, we can see that:
 - 1 337 kanjis are only used once (6.7%):
