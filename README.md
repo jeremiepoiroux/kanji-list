@@ -46,6 +46,8 @@ If we have a look at the .csv, we can see that:
 
 We will use this threshold to filter our list accordingly. The filtered list may be downloaded [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count_99.csv).
 
+As a second step, we may now add some information to the .csv and have some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 8). ADD OTHER FREQUENCY MEASURES. 
+
 ## A new list: ordering the kanjis
 
 Work In Progress
