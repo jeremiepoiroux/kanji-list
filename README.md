@@ -43,6 +43,9 @@ This trend can also be verified on the following graph (TREND GRAPH). If we have
 \(\frac{1337}{20001}\)
 \frac{1337}{20001}\
 
+La fraction \(\frac{1337}{20001}\) est environ \(0.066847\).
+
+
 We will use this mark as a threshold and filter our list accordingly. The filtered list may be downloaded HERE.
 
 ## A new list: ordering the kanjis
