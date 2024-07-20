@@ -53,8 +53,9 @@ As a second step, we may now proof-test the list with regard to Patrick Kandrac'
 | diff. mean | -15.26 | -49.18| -148.75| -21.72 | -11.21    | -2.44| -6.51| -36.44   | -34.17   | -53.07     |
 | ratio mean | 1.24   | 0.96  | 0.88   | 1.14   | 1.17      | 1.17 | 1.17 | 0.97     | 0.98     | 0.97       |
 
+Third, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Patricks measures.
 
-Third, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). 
+
 
 ## A new list: ordering the kanjis
 
