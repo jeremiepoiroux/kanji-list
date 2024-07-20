@@ -33,6 +33,14 @@ An interesting insight, to cover 10% of the total use of kanjis, one only need t
 | 本    | 6    | 7 239 535  | 0.008436   | 0.095387  |
 | 人    | 7    | 5 861 052  | 0.006830   | 0.102217  |
 
+This trend can also be verified on the following graph (TREND GRAPH). If we have a look at the .csv, we can see that:
+- 1 337 kanjis are only used once (6.7%):
+- to cover \frac{1}{3} of the total use of kanjis, one only need to know 72 of them;
+- to cover \frac{1}{2} of the total use of kanjis, one only need to know 165 of them;
+- to cover \frac{9}{10} of the total use of kanjis, one only need to know 910 of them;
+- Finally, to cover \frac{99}{100} of the total use of kanjis, one only need to know 2173 of them.
+
+We will use this mark as a threshold and filter our list accordingly. The filtered list may be downloaded HERE.
 
 ## A new list: ordering the kanjis
 
