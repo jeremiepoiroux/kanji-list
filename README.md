@@ -66,7 +66,7 @@ I compare the rank of the frequency of kanjis in the Japanese 2022 Wikipedia wit
 
 For instance, for a given kanji, if its frequency rank is x in the Japanese Wikipedia, it will be, in average, x - 15.26 in the Google Dataset (Shibano's Google Kanji Data, 2009). Our dataset happen to be, unsurprisingly, very similar to the WKFR one (another Wikipedia set, 2010), but also to the KD dataset (based on the Mainichi Newspaper's articles, 2000-2010). The correlation coefficients (Pearson, Spearman and Kendall) shows that our list is fairly comparable to the AVG FREQ and FREQ (1) lists by Kandrac. 
 
-Fourth, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its Heisig keyword, readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Patricks measures.
+Fourth, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its Heisig keyword, readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Kandrac's lists (AVG FREQ, FREQ (1) and FREQ BIG 5).
 
 
 
