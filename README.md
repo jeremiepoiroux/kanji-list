@@ -46,7 +46,7 @@ If we have a look at the .csv, we can see that:
 
 We will use this threshold to filter our list accordingly. The filtered list may be downloaded [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/jpwiki2022_kanjis_99.csv).
 
-As a third step, we may now proof-test the list with regard to Patrick Kandrac's [work](https://www.japanesestudies.org.uk/ejcjs/vol22/iss2/kandrac.html) which resulted in a [comparison](https://www.reddit.com/r/LearnJapanese/comments/rji33t/ultimate_kanji_frequency_list/) of the frequency rank of kanjis in seven databases, augmented by one average frequency and two weighted frequencies columns. 
+As a third step, we may now proof-test the list with regard to Patrick Kandráč's [work](https://www.japanesestudies.org.uk/ejcjs/vol22/iss2/kandrac.html) which resulted in a [comparison](https://www.reddit.com/r/LearnJapanese/comments/rji33t/ultimate_kanji_frequency_list/) of the frequency rank of kanjis in seven databases, augmented by one average frequency and two weighted frequencies columns. 
 
 > AVG FREQ: standard average frequency value of all seven database-specific average values (all databases are treated equally)
 
@@ -54,7 +54,7 @@ As a third step, we may now proof-test the list with regard to Patrick Kandrac's
 
 > FREQ BIG 5:	weighted average frequency value of five database-specific average values (excluding KD and WKFR) (KUF = superior, jisho.org = inferior)
 
-I compare the rank of the frequency of kanjis in the Japanese 2022 Wikipedia with all the 10 datasets, first with the absolute frequency difference, then with a calculation of the Pearson correlation coefficient. Please note that from the merge of the two lists (mine with 2 172 kanjis, Kandrac's with 2 242), the comparison is effective on 1 977 kanjis. 
+I compare the rank of the frequency of kanjis in the Japanese 2022 Wikipedia with all the 10 datasets, first with the absolute frequency difference, then with a calculation of the Pearson correlation coefficient. Please note that from the merge of the two lists (mine with 2 172 kanjis, Kandráč's with 2 242), the comparison is effective on 1 977 kanjis. 
 
 
 |        | Google | KUF   | MCD    | 文化庁  | jisho.org | KD   | WKFR | AVG FREQ | FREQ (1) | FREQ BIG 5 |
@@ -64,7 +64,7 @@ I compare the rank of the frequency of kanjis in the Japanese 2022 Wikipedia wit
 | Spearman. Corr. | 0.83   | 0.92  | 0.86   | 0.88   | 0.86      | 0.77 | 0.96 | 0.91     | 0.91     | 0.90       |
 | Kendall. Corr. | 0.64   | 0.75  | 0.63   | 0.70   | 0.67      | 0.59 | 0.86 | 0.74     | 0.74     | 0.72       |
 
-For instance, for a given kanji, if its frequency rank is x in the Japanese Wikipedia, it will be, in average, x - 15.26 in the Google Dataset (Shibano's Google Kanji Data, 2009). Our dataset happen to be, unsurprisingly, very similar to the WKFR one (another Wikipedia set, 2010), but also to the KD dataset (based on the Mainichi Newspaper's articles, 2000-2010). The correlation coefficients (Pearson, Spearman and Kendall) shows that our list is fairly comparable to the AVG FREQ and FREQ (1) lists by Kandrac. 
+For instance, for a given kanji, if its frequency rank is x in the Japanese Wikipedia, it will be, in average, x - 15.26 in the Google Dataset (Shibano's Google Kanji Data, 2009). Our dataset happen to be, unsurprisingly, very similar to the WKFR one (another Wikipedia set, 2010), but also to the KD dataset (based on the Mainichi Newspaper's articles, 2000-2010). The correlation coefficients (Pearson, Spearman and Kendall) shows that our list is fairly comparable to the AVG FREQ and FREQ (1) lists by Kandráč. 
 
 Fourth, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its Heisig keyword, readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Kandrac's lists (AVG FREQ, FREQ (1) and FREQ BIG 5). The .csv file can be found [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/jpwiki2022_kanjis_99_info_master.csv). NaN and None values were changed to 0.
 
