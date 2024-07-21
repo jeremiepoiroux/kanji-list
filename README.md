@@ -6,7 +6,7 @@ With this project, I would like to suggest a new list in order to mingle contemp
 
 ## A new list: filtering the relevant kanjis
 
-First of all, the task is to filter, from thousands of kanjis, a list with relevant (useful) kanjis. The most popular lists (from MEXT, RTK, JLPT, etc.) seem to have been filtered by popularity, although the criterias are unknown. They generally feature 2 000+ kanjis, a reliable number to read the majority of common texts (especially newspaper articles). Projects which try to objectify the filtering exist, like [Kanji Usage Frequency](https://scriptin.github.io/kanji-frequency/). Dmitry Shpika had a similar goal to us, which was providing answers to the following question: 
+1. First of all, the task is to filter, from thousands of kanjis, a list with relevant (useful) kanjis. The most popular lists (from MEXT, RTK, JLPT, etc.) seem to have been filtered by popularity, although the criterias are unknown. They generally feature 2 000+ kanjis, a reliable number to read the majority of common texts (especially newspaper articles). Projects which try to objectify the filtering exist, like [Kanji Usage Frequency](https://scriptin.github.io/kanji-frequency/). Dmitry Shpika had a similar goal to us, which was providing answers to the following question: 
 > "in which order should I learn Japanese kanji if I have a goal of reading some specific type of texts, e.g. news or fiction?".
 
 For our project, we decided to analyse the Japanese Wikipedia, a large database of texts about various topics. Thus, we assume the use of a great number of kanjis. We tested our calculations on the 5 millions sentences of the [Japanese wiki dump sentence dataset](https://huggingface.co/datasets/AhmedSSabir/Japanese-wiki-dump-sentence-dataset) by Ahmed Sabir. For the project, we then used a complete dump of the Japanese Wikipedia, as of 2022.08.08. The dataset (.json), prepared by Inari Kami is available [here](https://huggingface.co/datasets/inarikami/wikipedia-japanese). For convenience, I transformed the .json into a .csv file (I will give access to it). 
@@ -20,7 +20,7 @@ Here are some basic stats about the Japanese Wikipedia dataset:
 - The unique number of kanjis hits the limit of the CJK Unified Ideograph (20 992). 
 Bonus: if we consider the CJK Unified Ideographs (20 992) as well as the characters in the CJK Extensions (97 870) and the CJK Compatibility Ideographs (1 054), the number of unique "kanjis" (actually, ideographs) would be 31 827.
 
-The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found the kanjis count fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). As a result, the number of unique Kanjis used in the Japanese Wikipedia excepted in the mentioned articles is 20 001. We now have a [.csv file](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count.csv) with five columns, the kanjis, the rank (based on the number of occurences), the number of occurrences, the frequency of use and the cumulative frequency. The file is ordered by rank.
+2. The next step is to calculate the number of occurences of each kanji and the cumulative frequency. Here, I found the kanjis count fooled by two Wikipedia articles, which are (tadam), [Unicode一覧 6000-6FFF](https://ja.wikipedia.org/wiki/Unicode%E4%B8%80%E8%A6%A7_6000-6FFF) and [CJK統合漢字 (6300-77FF)](https://ja.wikipedia.org/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97_(6300-77FF)). As a result, the number of unique Kanjis used in the Japanese Wikipedia excepted in the mentioned articles is 20 001. We now have a [.csv file](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count.csv) with five columns, the kanjis, the rank (based on the number of occurences), the number of occurrences, the frequency of use and the cumulative frequency. The file is ordered by rank.
 
 As a prelimenary interesting insight, to cover 10% of the total use of kanjis, one only need to know 7 of them. In other words, to know 7 kanjis should be enough to read 10% of the kanjis used in a text:
 | Kanji | Rank | Nb. of occ.| Frequency | Cum. Freq. |
@@ -46,14 +46,25 @@ If we have a look at the .csv, we can see that:
 
 We will use this threshold to filter our list accordingly. The filtered list may be downloaded [here](https://github.com/jeremiepoiroux/kanji-list/blob/main/japanese_wikipedia_2022_kanjis_count_99.csv).
 
-As a second step, we may now proof-test the list with regard to Patrick Kandrac's [work](https://www.japanesestudies.org.uk/ejcjs/vol22/iss2/kandrac.html) which resulted in a [comparison](https://www.reddit.com/r/LearnJapanese/comments/rji33t/ultimate_kanji_frequency_list/) of the frequency rank of kanjis in seven databases, augmented by one average frequency and two weighted frequencies columns. I compared the rank of the frequency of kanjis in the Japanese 2022 Wikipedia with all the 10 dabasets, first with the mean of the differences of frequency of all kanjis, then with the mean of the ratio of frequency of all kanjis. Please note that form the merge of the two lists (mine with 2 172 kanjis, Patricks with 2 242), the comparison is effective on 1 977 kanjis. Although our list is only quite similar to the "Kanji Database" with the Mainich Newspaper (2000-2010) as a source, the ratios mean makes it close to Patricks calculations (AVG FREQ, FREQ (1) and FREQ BIG 5). We might suggest this speaks for the quality of the database we rely on.
+3. As a third step, we may now proof-test the list with regard to Patrick Kandrac's [work](https://www.japanesestudies.org.uk/ejcjs/vol22/iss2/kandrac.html) which resulted in a [comparison](https://www.reddit.com/r/LearnJapanese/comments/rji33t/ultimate_kanji_frequency_list/) of the frequency rank of kanjis in seven databases, augmented by one average frequency and two weighted frequencies columns. 
+
+> AVG FREQ: standard average frequency value of all seven database-specific average values (all databases are treated equally)
+> FREQ (1):	weighted average frequency value of all seven database-specific average values (Google, KUF and 文化庁 treated as superior)
+> FREQ BIG 5:	weighted average frequency value of five database-specific average values (excluding KD and WKFR) (KUF = superior, jisho.org = inferior)
+
+I compare the rank of the frequency of kanjis in the Japanese 2022 Wikipedia with all the 10 datasets, first with the absolute frequency difference, then with a calculation of the Pearson correlation coefficient. Please note that from the merge of the two lists (mine with 2 172 kanjis, Kandrac's with 2 242), the comparison is effective on 1 977 kanjis. 
+
 
 |        | Google | KUF   | MCD    | 文化庁  | jisho.org | KD   | WKFR | AVG FREQ | FREQ (1) | FREQ BIG 5 |
 |--------|--------|-------|--------|--------|-----------|------|------|----------|----------|------------|
-| diff. mean | -15.26 | -49.18| -148.75| -21.72 | -11.21    | -2.44| -6.51| -36.44   | -34.17   | -53.07     |
-| ratio mean | 1.24   | 0.96  | 0.88   | 1.14   | 1.17      | 1.17 | 1.17 | 0.97     | 0.98     | 0.97       |
+| Diff. Abs. Freq. | -15.26 | -49.18| -148.75| -21.72 | -11.21    | -2.44| -6.51| -36.44   | -34.17   | -53.07     |
+| Pearson. Corr. | 0.82   | 0.91  | 0.85   | 0.87   | 0.85      | 0.76 | 0.96 | 0.91     | 0.91     | 0.89       |
+| Spearman. Corr. | 0.83   | 0.92  | 0.86   | 0.88   | 0.86      | 0.77 | 0.96 | 0.91     | 0.91     | 0.90       |
+| Kendall. Corr. | 0.64   | 0.75  | 0.63   | 0.70   | 0.67      | 0.59 | 0.86 | 0.74     | 0.74     | 0.72       |
 
-Third, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its Heisig keyword, readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Patricks measures.
+For instance, for a given kanji, if its frequency rank is x in the Japanese Wikipedia, it will be, in average, x - 15.26 in the Google Dataset (Shibano's Google Kanji Data, 2009). Our dataset happen to be, unsurprisingly, very similar to the WKFR one (another Wikipedia set, 2010), but also to the KD dataset (based on the Mainichi Newspaper's articles, 2000-2010). The correlation coefficients (Pearson, Spearman and Kendall) shows that our list is fairly comparable to the AVG FREQ and FREQ (1) lists by Kandrac. 
+
+4. Fourth, we add some information to the .csv and calculate some basic statistics. We use the [kanjiapi](https://kanjiapi.dev/) by Iridium Szreter to add the meaning of each kanji, as well as its Heisig keyword, readings, unicode, stoke count, JLPT level (from 5 to 1) and school grade level (from 1 to 6 for primary school and 8 for high school). For comparison with other databases, we keep Patricks measures.
 
 
 
